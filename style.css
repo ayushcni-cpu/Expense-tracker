@@ -1,60 +1,128 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  color: #333;
 }
 
 .container {
-    background: #fff;
-    padding: 20px;
-    width: 350px;
-    border-radius: 10px;
+  width: 380px;
 }
 
-h2, h3 {
-    text-align: center;
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
 }
 
-.income-expense {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+/* Cards */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.money.plus {
-    color: green;
+.balance-card {
+  text-align: center;
 }
 
-.money.minus {
-    color: red;
+.balance-card h2 {
+  color: #4CAF50;
 }
 
-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
+/* Summary */
+.summary {
+  display: flex;
+  gap: 10px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
+.income-card {
+  flex: 1;
+  border-left: 5px solid #4CAF50;
 }
 
+.expense-card {
+  flex: 1;
+  border-left: 5px solid #F44336;
+}
+
+.income-card p {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.expense-card p {
+  color: #F44336;
+  font-weight: bold;
+}
+
+/* Form */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.income-btn {
+  background: #4CAF50;
+}
+
+.expense-btn {
+  background: #F44336;
+}
+
+/* List */
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 li {
-    background: #eee;
-    padding: 10px;
-    margin: 5px 0;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: #f4f4f4;
+}
+
+li.plus {
+  border-left: 5px solid #4CAF50;
+}
+
+li.minus {
+  border-left: 5px solid #F44336;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
 }
